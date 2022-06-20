@@ -1,0 +1,37 @@
+package SeleniumAutomation;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.By.ById;
+import org.openqa.selenium.By.ByLinkText;
+import org.openqa.selenium.By.ByXPath;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class SeleniumFirstScript {
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver", "D:\\java-2022-06\\eclipse\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+	
+		driver.get("https://zoro.to/watch/one-piece-100?ep=2240");
+		
+		Thread.sleep(3000);
+		
+		driver.findElement(By.xpath("//*[@id=\"servers-content\"]/div[2]/div[2]/div[2]")).click();
+		
+		Thread.sleep(3000);
+		
+		driver.findElement(By.xpath("//*[@id=\"ani_detail\"]/div/div/div[2]/div[2]/div[1]/div[1]")).click();
+		
+		Thread.sleep(3000);
+		
+		driver.findElement(By.xpath("/html/body/div[1]/div/div[2]/div[12]/div[4]/div[2]/div[12]")).clear();
+	
+		
+			
+	}
+
+
+
+}
